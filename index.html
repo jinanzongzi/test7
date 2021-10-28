@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content=" initial-scale=1, maximum-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>寻找小知</title>
+</head>
+<style type="text/css">
+	
+</style>
+<body>
+	
+    <script src="js/pixi.min.js"></script>
+    <script>
+    	
+		var app = new PIXI.Application(750,1334);
+        document.body.appendChild(app.view);
+        
+        var bg = new PIXI.Sprite.fromImage("res/map1.jpg");
+        app.stage.addChild(bg);
+        bg.scale.x = 0.5;
+        bg.scale.y = 0.5;
+        
+        var corn = new PIXI.Sprite.fromImage("res/corn.png");
+        app.stage.addChild(corn);
+        corn.x = 105;
+        corn.y = 135;
+        corn.scale.x = 0.5;
+        corn.scale.y = 0.5;
+        corn.interactive = true;
+        corn.on("touchstart",map11);
+        corn.on("click",map11);
+        
+        function map11(){
+        	window.location.href = "http://www.baidu.com";
+        }
+        
+        
+    </script>
+</body>
+</html>
